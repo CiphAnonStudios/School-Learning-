@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Math Learning</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f2f6ff;
+      color: #222;
+    }
+
+    header {
+      background: #3157d5;
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+    }
+
+    nav {
+      background: #203c9c;
+      text-align: center;
+      padding: 12px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 25px auto;
+      padding: 0 15px;
+    }
+
+    section {
+      background: white;
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #3157d5;
+    }
+
+    .question {
+      margin: 15px 0;
+      padding: 15px;
+      background: #eef2ff;
+      border-radius: 8px;
+    }
+
+    input {
+      padding: 8px;
+      width: 120px;
+      font-size: 16px;
+    }
+
+    button {
+      background: #3157d5;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #203c9c;
+    }
+
+    #result {
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    .video-container {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+
+    .video-container iframe {
+      width: 100%;
+      height: 450px;
+      border: none;
+    }
+
+    footer {
+      text-align: center;
+      background: #203c9c;
+      color: white;
+      padding: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Math Learning</h1>
+    <p>Learn math, watch lessons, and practice your skills.</p>
+  </header>
+
+  <nav>
+    <a href="#lessons">Lessons</a>
+    <a href="#video">Video</a>
+    <a href="#practice">Practice</a>
+    <a href="#about">About</a>
+  </nav>
+
+  <main>
+    <section id="lessons">
+      <h2>Math Lessons</h2>
+
+      <p><strong>Addition:</strong> Combining numbers to find a total.</p>
+      <p><strong>Subtraction:</strong> Finding the difference between numbers.</p>
+      <p><strong>Multiplication:</strong> Adding the same number multiple times.</p>
+      <p><strong>Division:</strong> Splitting a number into equal groups.</p>
+    </section>
+
+    <section id="video">
+      <h2>Math Learning Video</h2>
+
+      <div class="video-container">
+        <iframe
+          src="https://drive.google.com/file/d/1GhJnl35m05XYpjooWoxeg0lw54VpjCEx/preview"
+          title="Math Learning Video"
+          allow="autoplay"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <p>
+        Watch the video above, then try the practice questions below.
+      </p>
+    </section>
+
+    <section id="practice">
+      <h2>Practice Questions</h2>
+
+      <div class="question">
+        <p>1. What is 8 + 7?</p>
+        <input type="number" id="answer1">
+      </div>
+
+      <div class="question">
+        <p>2. What is 6 × 4?</p>
+        <input type="number" id="answer2">
+      </div>
+
+      <div class="question">
+        <p>3. What is 20 ÷ 5?</p>
+        <input type="number" id="answer3">
+      </div>
+
+      <button onclick="checkAnswers()">Check Answers</button>
+      <p id="result"></p>
+    </section>
+
+    <section id="about">
+      <h2>About Math Learning</h2>
+
+      <p>
+        Math Learning is a basic educational website that helps students
+        review math topics, watch lessons, and practice solving problems.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Math Learning</p>
+  </footer>
+
+  <script>
+    function checkAnswers() {
+      let score = 0;
+
+      if (Number(document.getElementById("answer1").value) === 15) {
+        score++;
+      }
+
+      if (Number(document.getElementById("answer2").value) === 24) {
+        score++;
+      }
+
+      if (Number(document.getElementById("answer3").value) === 4) {
+        score++;
+      }
+
+      document.getElementById("result").textContent =
+        "You scored " + score + " out of 3!";
+    }
+  </script>
+</body>
+</html>
